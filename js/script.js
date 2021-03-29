@@ -10,16 +10,19 @@ $(document).ready(function() {
 
         if (scroll > 200) {
             if (!flag) {
-                $("#logo").css({ "margin-top": "-5px", "width": "50px", "height": "50px" });
-
+                $("#image").css({ "top": "0px", "left": "0px" });
+                $("#picture").css({ "margin-top": "15px", "margin-left": "60px", "width": "60px" });
                 $("header").css({ "background-color": "#3C3C3C" });
+                $("ul li").css({ "color": "white" });
+
                 flag = true;
             }
         } else {
             if (flag) {
-                $("#logo").css({ "margin-top": "150px", "width": "250px", "height": "250px" });
-
+                $("#image").css({ "top": "50px", "left": "0px" });
+                $("#picture").css({ "margin-top": "70px", "margin-left": "50px", "width": "190px" });
                 $("header").css({ "background-color": "transparent" });
+                $("ul li").css({ "color": "black" });
                 flag = false;
             }
         }
