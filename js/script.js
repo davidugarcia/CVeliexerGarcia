@@ -20,7 +20,7 @@ $(document).ready(function() {
         } else {
             if (flag) {
                 $("#image").css({ "top": "50px", "left": "0px" });
-                $("#picture").css({ "margin-top": "70px", "margin-left": "50px", "width": "190px" });
+                $("#picture").css({ "margin-top": "70px", "margin-left": "146px", "width": "190px" });
                 $("header").css({ "background-color": "transparent" });
                 $("ul li").css({ "color": "black" });
                 flag = false;

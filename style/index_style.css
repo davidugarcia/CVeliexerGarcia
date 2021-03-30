@@ -4,13 +4,18 @@
     font-family: helvetica;
 }
 
+#body {
+    width: 100%;
+    height: 500px;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
 }
 
-.item1 {
+.header {
     height: 60px;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -39,7 +44,7 @@ nav {
 }
 
 img#picture {
-    margin-left: 50px;
+    margin-left: 146px;
     margin-top: 70px;
     width: 190px;
     transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
@@ -64,21 +69,16 @@ ul a {
     text-decoration: none;
 }
 
-.item3 {
+.seccion {
     grid-column-start: 2;
     grid-column-end: 4;
 }
 
-.item4 {
+.footer {
     grid-column-start: 1;
     grid-column-end: 4;
 }
 
 section#banner {
     background-color: #ededed;
-}
-
-#body {
-    width: 100%;
-    height: 500px;
 }
