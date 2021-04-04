@@ -10,21 +10,18 @@ $(document).ready(function() {
 
         if (scroll > 190) {
             if (!flag) {
-                $("#image").css({ "top": "0px", "left": "0px" });
-                $("#picture").css({ "margin-top": "15px", "margin-left": "60px", "width": "60px" });
+                $("#image").css({ "top": "20px", "left": "122px", "width": "75px", "height": "80px" });
                 $("header").css({ "background-color": "#3C3C3C" });
-                $("nav").css({ "margin-top": "0px" });
-                $("ul li").css({ "color": "white" });
+                $("li a").css({ "color": "white" });
 
                 flag = true;
             }
         } else {
             if (flag) {
-                $("#image").css({ "top": "50px", "left": "0px" });
-                $("#picture").css({ "margin-top": "45px", "margin-left": "146px", "width": "190px" });
+                $("#image").css({ "top": "130px", "left": "146px", "width": "190px", "height": "207px" });
+                $("#picture").css({ "width": "100%" });
                 $("header").css({ "background-color": "transparent" });
-                $("nav").css({ "margin-top": "5px" });
-                $("ul li").css({ "color": "black" });
+                $("li a").css({ "color": "black" });
                 flag = false;
             }
         }
