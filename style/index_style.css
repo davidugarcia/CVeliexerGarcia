@@ -44,9 +44,31 @@ img#picture {
 .tituloPosicion {
     position: absolute;
     top: 345px;
-    left: 127px;
-    width: 190px;
+    left: 71px;
+    width: 301px;
     text-align: center;
+}
+
+@font-face {
+    font-family: "nombre";
+    src: url(./typografia/LinBiolinum_aWI.ttf);
+}
+
+.tituloNombre {
+    font-family: "nombre";
+    font-size: 40px;
+    color: #707375;
+}
+
+@font-face {
+    font-family: "cargo";
+    src: url(./typografia/LinBiolinum_aWI.ttf);
+}
+
+.cargo {
+    font-family: "cargo";
+    font-size: 25px;
+    color: #147cd8;
 }
 
 ul {

@@ -18,7 +18,7 @@ $(document).ready(function() {
             }
         } else {
             if (flag) {
-                $("#image").css({ "top": "130px", "left": "146px", "width": "190px", "height": "207px" });
+                $("#image").css({ "top": "130px", "left": "127px", "width": "190px", "height": "207px" });
                 $("#picture").css({ "width": "100%" });
                 $("header").css({ "background-color": "transparent" });
                 $("li a").css({ "color": "black" });
