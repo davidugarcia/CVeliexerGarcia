@@ -12,6 +12,8 @@ $(document).ready(function() {
             if (!flag) {
                 $("#image").css({ "top": "12px", "left": "185px", "width": "75px", "height": "80px" });
                 $("header").css({ "background-color": "#3C3C3C" });
+                $("nav li").css({ "border-left": "1px solid #bbb" });
+                $("nav li:last-child").css({ "border-right": "none" });
                 $("li a").css({ "color": "white" });
 
                 flag = true;
