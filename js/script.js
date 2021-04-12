@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    var elie = $("#banner").css({ "height": $(window).height() + "px" });
-    console.log(elie);
+    /*var elie = $("#banner").css({ "height": $(window).height() + "px" });
+    console.log(elie);*/
     var flag = false;
     var scroll;
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
             }
         } else {
             if (flag) {
-                $("#image").css({ "top": "100px", "left": "127px", "width": "190px", "height": "207px" });
+                $("#image").css({ "top": "100px", "left": "123px", "width": "190px", "height": "207px" });
                 $("#picture").css({ "width": "100%" });
                 $("header").css({ "background-color": "transparent" });
                 $("li a").css({ "color": "black" });
