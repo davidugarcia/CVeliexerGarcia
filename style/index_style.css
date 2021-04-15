@@ -3,6 +3,10 @@
             padding: 0;
             font-family: helvetica;
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
         /**Navbar / image*/
         
         .header {
@@ -218,7 +222,7 @@
             grid-column-start: 2;
             grid-column-end: 4;
         }
-        /**Trabajos*/
+        /**Portafolio*/
         
         .container_trabajos {
             display: grid;
@@ -226,6 +230,11 @@
             grid-gap: 5px;
             padding: 5px;
             margin-top: 25px;
+        }
+        
+        .Portafolio {
+            color: #3c3c3c;
+            padding-top: 60px;
         }
         
         .image1 {
