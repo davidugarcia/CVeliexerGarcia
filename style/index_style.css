@@ -104,6 +104,7 @@
         .aside {
             grid-column-start: 1;
             grid-column-end: 2;
+            /*height: 700px;*/
             padding-top: 350px;
             background-color: #fbfbfb;
             box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
@@ -117,6 +118,7 @@
         
         @font-face {
             font-family: "cargo";
+            /*src: url(./typografia/LinBiolinum_aWI.ttf);*/
             src: url(./typografia/LinBiolinum_aWI.ttf);
         }
         
@@ -128,6 +130,7 @@
         .espacioParrafo {
             margin: 10px;
             padding: 5px;
+            text-align: justify;
             color: #d4d4d4;
         }
         
@@ -183,7 +186,7 @@
         
         .container_experiencia>div {
             text-align: left;
-            padding: 20px 0;
+            padding: 30px 0;
         }
         /**Experiencia*/
         
@@ -197,6 +200,7 @@
         .item2 {
             grid-column-start: 2;
             grid-column-end: 4;
+            color: #9a758f;
         }
         
         .item3 {
@@ -209,6 +213,7 @@
         .item4 {
             grid-column-start: 2;
             grid-column-end: 4;
+            color: #9a758f;
         }
         
         .item5 {
@@ -221,6 +226,7 @@
         .item6 {
             grid-column-start: 2;
             grid-column-end: 4;
+            color: #9a758f;
         }
         /**Portafolio*/
         
@@ -233,7 +239,7 @@
         }
         
         .Portafolio {
-            color: #3c3c3c;
+            color: #3d76a9;
             padding-top: 60px;
         }
         
@@ -319,6 +325,7 @@
         .espacioP {
             margin-top: 10px;
             color: #695f5f;
+            text-align: justify;
         }
         
         .espacioP a {
