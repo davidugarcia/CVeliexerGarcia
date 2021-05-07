@@ -331,15 +331,16 @@
         .espacioP a {
             color: #df37ea;
         }
-        /*Footer**/
+        /*contacto**/
         
-        .footer {
-            grid-column-start: 1;
-            grid-column-end: 4;
+        .contacto {
+            /*grid-column-start: 1;
+            grid-column-end: 4;*/
             background-color: #ededed;
+            margin-top: 190px;
         }
         
-        .footer h2 {
+        .contacto h2 {
             text-align: center;
             padding-top: 20px;
             color: #5f4a4a;
