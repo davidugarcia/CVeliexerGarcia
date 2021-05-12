@@ -104,7 +104,7 @@
         .aside {
             grid-column-start: 1;
             grid-column-end: 2;
-            /*height: 700px;*/
+            height: 720px;
             padding-top: 350px;
             background-color: #fbfbfb;
             box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
@@ -122,7 +122,7 @@
             src: url(./typografia/LinBiolinum_aWI.ttf);
         }
         
-        .espacio {
+        .espacioperfil {
             padding: 15px;
             background-color: rgb(60 60 60);
         }
@@ -136,7 +136,7 @@
         
         .espacioskill {
             padding: 20px;
-            margin-top: 12px;
+            margin-top: 40px;
         }
         
         .skill {
@@ -161,6 +161,68 @@
         
         .skill_item li:hover {
             background-color: #555;
+        }
+        /**Educacion*/
+        
+        .Educacion {
+            padding: 20px;
+            background-color: rgb(28 24 21);
+            margin: 20px 0px 0px 0px;
+        }
+        
+        .container_educacion {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            height: 275px;
+            padding-top: 0px;
+        }
+        
+        .container_educacion>H4 {
+            color: #d4d4d4;
+        }
+        
+        .container_educacion>div {
+            text-align: left;
+            padding: 10px 0px 20px 0px;
+        }
+        
+        .container_educacion p {
+            margin-top: 10px;
+            color: #ffffff;
+        }
+        
+        .container_educacion a {
+            color: #a48eff;
+        }
+        /*contacto**/
+        
+        .altocontacto {
+            height: 200px;
+        }
+        
+        .contacto {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        }
+        
+        .contacto h2 {
+            text-align: center;
+            padding-top: 20px;
+            color: #000000;
+            text-shadow: 4px 4px 4px #3ba0ab;
+        }
+        
+        .center_iconos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75px;
+        }
+        
+        .center_iconos i {
+            margin: 15px;
+            color: #776767;
         }
         /** section*/
         
@@ -228,11 +290,18 @@
             grid-column-end: 4;
             color: #9a758f;
         }
+        
+        .espacioP {
+            margin-top: 10px;
+            color: #695f5f;
+            text-align: justify;
+        }
         /**Portafolio*/
         
         .container_trabajos {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
+            /*grid-template-columns: 33% 33% 33%;*/
+            grid-template-columns: 50% 50%;
             grid-gap: 5px;
             padding: 5px;
             margin-top: 25px;
@@ -262,101 +331,10 @@
         }
         
         div.polaroid {
-            width: 100%;
+            width: 90%;
             background-color: white;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-bottom: 25px;
-        }
-        
-        div.container {
-            text-align: center;
-            padding: 10px 20px;
-        }
-        /**Educacion*/
-        
-        .container_educacion {
-            display: grid;
-            grid-template-columns: 36% auto auto;
-            grid-gap: 10px;
-            padding: 22px;
-        }
-        
-        .container_educacion>div {
-            text-align: left;
-            padding: 20px 0;
-        }
-        
-        .item7 {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        
-        .item8 {
-            grid-column-start: 2;
-            grid-column-end: 4;
-        }
-        
-        .item9 {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        
-        .item10 {
-            grid-column-start: 2;
-            grid-column-end: 4;
-        }
-        
-        .item11 {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        
-        .item12 {
-            grid-column-start: 2;
-            grid-column-end: 4;
-        }
-        
-        .espacioP {
-            margin-top: 10px;
-            color: #695f5f;
-            text-align: justify;
-        }
-        
-        .espacioP a {
-            color: #df37ea;
-        }
-        /*contacto**/
-        
-        .contacto {
-            /*grid-column-start: 1;
-            grid-column-end: 4;*/
-            background-color: #ededed;
-            margin-top: 190px;
-        }
-        
-        .contacto h2 {
-            text-align: center;
-            padding-top: 20px;
-            color: #5f4a4a;
-            text-shadow: 4px 4px 4px #3ba0ab;
-        }
-        
-        .center_iconos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 75px;
-        }
-        
-        .center_iconos i {
-            margin: 15px;
-            color: #776767;
+            margin: 0px 15px 50px 15px;
         }
         
         section#banner {

@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-    /*var elie = $("#banner").css({ "height": $(window).height() + "px" });
-    console.log(elie);*/
+
     var flag = false;
     var scroll;
 
@@ -9,6 +8,7 @@ $(document).ready(function() {
         scroll = $(window).scrollTop();
 
         if (scroll > 97) {
+
             if (!flag) {
                 $("#image").css({ "top": "12px", "left": "185px", "width": "75px", "height": "80px" });
                 $(".tituloPosicion").css({ "top": "95px" });
@@ -17,6 +17,7 @@ $(document).ready(function() {
                 $("nav li").css({ "border-left": "1px solid #bbb" });
                 $("nav li:last-child").css({ "border-right": "none" });
                 $("li a").css({ "color": "white" });
+                $(".altocontacto").css({ "height": "300px" });
 
                 flag = true;
             }
@@ -28,6 +29,8 @@ $(document).ready(function() {
                 $(".tituloPosicion").css({ "top": "312px" });
                 $(".aside").css({ "padding-top": "350px" });
                 $("li a").css({ "color": "black" });
+                $(".altocontacto").css({ "height": "200px" });
+
                 flag = false;
             }
         }
