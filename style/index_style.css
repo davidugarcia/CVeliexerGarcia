@@ -391,32 +391,59 @@
     @media (min-width: 360px) {
         .header {
             display: none;
-            position: sticky;
-            top: 0px;
-            width: 100%;
-            transition: background-color .2s;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            padding: 12px;
         }
         .aside {
             grid-column-start: 1;
-            grid-column-end: 4;
-            height: 720px;
-            padding-top: 350px;
+            grid-column-end: 2;
+            height: auto;
+            padding-top: 0px;
             background-color: #fbfbfb;
             box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-            transition: padding-top .2s;
-        }
-        .container_educacion {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            height: 275px;
-            padding: 5px;
-            margin: 10px;
         }
         .seccion {
             grid-column-start: 1;
-            grid-column-end: 4;
+            grid-column-end: 2;
             background-color: #fbfbfb;
             padding: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-size: 1.17em;
+            color: #695f5f;
+        }
+        .item2 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            color: #9a758f;
+        }
+        .item3 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-size: 1.17em;
+            color: #695f5f;
+        }
+        .item4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            color: #9a758f;
+        }
+        .item5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-size: 1.17em;
+            color: #695f5f;
+        }
+        .item6 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            color: #9a758f;
         }
     }
