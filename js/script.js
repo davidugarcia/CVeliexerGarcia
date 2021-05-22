@@ -41,17 +41,17 @@ $(document).ready(function() {
 class TextoAnimado {
     constructor(id, objetivo) {
         this.texto = document.getElementById(id);
-        console.log(this.texto)
+        //console.log(this.texto)
         this.objetivo = document.getElementById(objetivo);
-        console.log(this.objetivo)
+        //console.log(this.objetivo)
         this.letras = this.texto.innerText.split("");
-        console.log(this.letras)
+        //console.log(this.letras)
 
         this.texto.innerText = '';
 
         this.letras.forEach((letra) => {
             let caracter = letra === ' ' ? '&nbsp;' : letra;
-            console.log(caracter)
+            //console.log(caracter)
             this.texto.innerHTML = this.texto.innerHTML + `
                 <div>
 					<span>${caracter}</span>

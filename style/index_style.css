@@ -7,6 +7,10 @@
     html {
         scroll-behavior: smooth;
     }
+    
+    body {
+        background-color: #ededed;
+    }
     /**Navbar / image*/
     
     .header {
@@ -111,17 +115,6 @@
         transition: padding-top .2s;
     }
     
-    @font-face {
-        font-family: "nombre";
-        src: url(./typografia/LinBiolinum_aWI.ttf);
-    }
-    
-    @font-face {
-        font-family: "cargo";
-        /*src: url(./typografia/LinBiolinum_aWI.ttf);*/
-        src: url(./typografia/LinBiolinum_aWI.ttf);
-    }
-    
     .espacioperfil {
         padding: 15px;
         background-color: rgb(60 60 60);
@@ -171,8 +164,6 @@
     }
     
     .container_educacion {
-        grid-column-start: 1;
-        grid-column-end: 2;
         height: 275px;
         padding: 5px;
         margin: 10px;
@@ -208,7 +199,6 @@
     }
     
     .contact {
-        padding-top: 20px;
         color: #000000;
         text-shadow: 4px 4px 4px #3ba0ab;
         justify-content: center;
@@ -218,12 +208,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 75px;
     }
     
     .center_iconos i {
         margin: 15px;
-        color: #776767;
     }
     /** section*/
     
@@ -242,7 +230,7 @@
     
     .container_experiencia {
         display: grid;
-        grid-template-columns: 36% auto auto;
+        grid-template-columns: 36% auto;
         grid-gap: 10px;
         padding: 22px;
     }
@@ -262,7 +250,7 @@
     
     .item2 {
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
         color: #9a758f;
     }
     
@@ -275,7 +263,7 @@
     
     .item4 {
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
         color: #9a758f;
     }
     
@@ -288,7 +276,7 @@
     
     .item6 {
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
         color: #9a758f;
     }
     
@@ -301,16 +289,10 @@
     
     .container_trabajos {
         display: grid;
-        /*grid-template-columns: 33% 33% 33%;*/
         grid-template-columns: 50% 50%;
         grid-gap: 5px;
         padding: 5px;
         margin-top: 25px;
-    }
-    
-    .Portafolio {
-        color: #3d76a9;
-        padding-top: 60px;
     }
     
     .image1 {
@@ -336,10 +318,6 @@
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin: 0px 15px 50px 15px;
-    }
-    
-    section#banner {
-        background-color: #ededed;
     }
     /** animacion Experiencia - Portafolio - Contactame*/
     
@@ -388,23 +366,12 @@
     }
     /* phones */
     
-    @media (min-width: 360px) {
-        .header {
-            display: none;
-        }
+    @media only screen and (max-width: 360px) {
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: auto;
             grid-gap: 10px;
             padding: 12px;
-        }
-        .aside {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            height: auto;
-            padding-top: 0px;
-            background-color: #fbfbfb;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
         }
         .seccion {
             grid-column-start: 1;
@@ -412,38 +379,5 @@
             background-color: #fbfbfb;
             padding: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .item1 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        .item2 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            color: #9a758f;
-        }
-        .item3 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        .item4 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            color: #9a758f;
-        }
-        .item5 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            font-size: 1.17em;
-            color: #695f5f;
-        }
-        .item6 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            color: #9a758f;
         }
     }
