@@ -322,7 +322,8 @@
         position: absolute;
         top: 100px;
     }
-    /*@media only screen and (min-width: 360px) {
+    /*
+    @media only screen and (min-width: 360px) {
         .grid-container {
             grid-template-rows: repeat(3, auto);
         }
@@ -341,7 +342,7 @@
         .item1 {
             grid-column-start: 1;
             grid-column-end: 3;
-        }
+        }s
         .item2 {
             grid-column-start: 1;
             grid-column-end: 3;
