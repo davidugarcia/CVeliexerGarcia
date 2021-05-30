@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     console.log("listo");
 
     var flag = false;
     var scrollvertical;
 
+
+
     window.addEventListener("scroll", function() {
 
         scrollvertical = window.pageYOffset;
+        // console.log(scrollvertical);
 
         var imagen = document.getElementById("image"),
             picture = document.getElementById("picture"),
@@ -17,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
             link = document.querySelectorAll("li a"),
             espaciocontact = document.getElementsByClassName("espaciocontact")[0];
 
-        console.log(li);
-        console.log(link);
+        /* console.log(li);
+         console.log(link);*/
 
 
         if (scrollvertical > 97) {
@@ -67,68 +71,149 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    function Textoanimado(id) {
+
+        var texto = document.getElementById(id);
+
+        console.log(texto);
+
+        var letras = texto.innerText.split("");
+
+        texto.innerText = '';
+
+        letras.forEach((letra) => {
+            let caracter = letra === ' ' ? '&nbsp;' : letra;
+            console.log(caracter);
+            texto.innerHTML = texto.innerHTML + `
+                        <div>
+                            <span>${caracter}</span>
+                            <span class="segunda-linea">${caracter}</span>
+                        </div>
+                    `;
+        });
+
+        setInterval(encima, 5000);
+
+
+        function encima() {
+
+            var cuenta = 0;
+
+            //console.log(texto.children.length);
+
+            const intervalo = setInterval(myFunction, 80);
+
+            function myFunction() {
+                if (cuenta < texto.children.length) {
+                    texto.children[cuenta].classList.add('animacion');
+                    cuenta += 1;
+                } else {
+                    clearInterval(intervalo);
+                }
+            }
+        };
+
+        setInterval(afuera, 9000);
+
+        function afuera() {
+
+            var cuenta = 0;
+
+            //console.log(texto.children.length);
+
+            const intervalo = setInterval(myFunction, 40);
+
+            function myFunction() {
+                if (cuenta < texto.children.length) {
+                    texto.children[cuenta].classList.remove('animacion');
+                    cuenta += 1;
+                } else {
+                    clearInterval(intervalo);
+                }
+            }
+        };
+
+    };
+
+    Textoanimado("experiencia");
+    Textoanimado("portafolio");
+    Textoanimado("contact");
+
 });
 
 
-/*
-            class TextoAnimado {
-                constructor(id, objetivo) {
-                    this.texto = document.getElementById(id);
-                    //console.log(this.texto)
-                    this.objetivo = document.getElementById(objetivo);
-                    //console.log(this.objetivo)
-                    this.letras = this.texto.innerText.split("");
-                    //console.log(this.letras)
+/**JavaScript */
 
-                    this.texto.innerText = '';
+/*function TextoAnimado(id, objetivo) {
 
-                    this.letras.forEach((letra) => {
-                        let caracter = letra === ' ' ? '&nbsp;' : letra;
-                        //console.log(caracter)
-                        this.texto.innerHTML = this.texto.innerHTML + `
-                <div>
-					<span>${caracter}</span>
-					<span class="segunda-linea">${caracter}</span>
-				</div>
-			`;
-                    });
+    var texto = document.getElementById(id),
+        objetivo = document.getElementById(objetivo);
 
-                    this.objetivo.addEventListener('mouseenter', () => {
-                        let cuenta = 0;
+    console.log(texto);
+    console.log(objetivo);
 
-                        const intervalo = setInterval(() => {
-                            if (cuenta < this.texto.children.length) {
-                                this.texto.children[cuenta].classList.add('animacion');
-                                cuenta += 1;
-                            } else {
-                                clearInterval(intervalo);
-                            }
-                        }, 30);
-                    });
+    var letras = texto.innerText.split("");
 
-                    this.objetivo.addEventListener('mouseleave', () => {
-                        let cuenta = 0;
+    texto.innerText = '';
 
-                        const intervalo = setInterval(() => {
-                            if (cuenta < this.texto.children.length) {
-                                this.texto.children[cuenta].classList.remove('animacion');
-                                cuenta += 1;
-                            } else {
-                                clearInterval(intervalo);
-                            }
-                        }, 30);
-                    });
+    letras.forEach((letra) => {
+        let caracter = letra === ' ' ? '&nbsp;' : letra;
+        console.log(caracter);
+        texto.innerHTML = texto.innerHTML + `
+                    <div>
+                        <span>${caracter}</span>
+                        <span class="segunda-linea">${caracter}</span>
+                    </div>
+                `;
+    });
 
-                }
+
+    objetivo.addEventListener('mouseover', encima);
+
+    function encima() {
+
+        var cuenta = 0;
+
+        //console.log(texto.children.length);
+
+        const intervalo = setInterval(myFunction, 60);
+
+        function myFunction() {
+            if (cuenta < texto.children.length) {
+                texto.children[cuenta].classList.add('animacion');
+                cuenta += 1;
+            } else {
+                clearInterval(intervalo);
             }
+        }
+    };
 
-new TextoAnimado('experiencia', 'logotipo');
-new TextoAnimado('portafolio', 'portafoli');
-new TextoAnimado('contact', 'contacto');*/
 
-/*
-let ancho = screen.width;
-console.log(ancho);*/
+    objetivo.addEventListener('mouseout', afuera);
+
+    function afuera() {
+
+        var cuenta = 0;
+
+        //console.log(texto.children.length);
+
+        const intervalo = setInterval(myFunction, 30);
+
+        function myFunction() {
+            if (cuenta < texto.children.length) {
+                texto.children[cuenta].classList.remove('animacion');
+                cuenta += 1;
+            } else {
+                clearInterval(intervalo);
+            }
+        }
+    };
+
+};*/
+
+
+
+/**Con JQuery */
 
 /*$(document).ready(function() {
 
@@ -167,3 +252,58 @@ console.log(ancho);*/
     });
 
 });*/
+
+/*class TextoAnimado {
+    constructor(id, objetivo) {
+        this.texto = document.getElementById(id);
+        console.log(this.texto)
+        this.objetivo = document.getElementById(objetivo);
+        console.log(this.objetivo)
+        this.letras = this.texto.innerText.split("");
+        //console.log(this.letras)
+
+        this.texto.innerText = '';
+
+        this.letras.forEach((letra) => {
+            let caracter = letra === ' ' ? '&nbsp;' : letra;
+            //console.log(caracter)
+            this.texto.innerHTML = this.texto.innerHTML + `
+                <div>
+					<span>${caracter}</span>
+					<span class="segunda-linea">${caracter}</span>
+				</div>
+			`;
+        });
+
+        this.objetivo.addEventListener('mouseenter', () => {
+            let cuenta = 0;
+
+            const intervalo = setInterval(() => {
+                if (cuenta < this.texto.children.length) {
+                    this.texto.children[cuenta].classList.add('animacion');
+                    cuenta += 1;
+                } else {
+                    clearInterval(intervalo);
+                }
+            }, 30);
+        });
+
+        this.objetivo.addEventListener('mouseleave', () => {
+            let cuenta = 0;
+
+            const intervalo = setInterval(() => {
+                if (cuenta < this.texto.children.length) {
+                    this.texto.children[cuenta].classList.remove('animacion');
+                    cuenta += 1;
+                } else {
+                    clearInterval(intervalo);
+                }
+            }, 30);
+        });
+
+    }
+}
+
+new TextoAnimado('experiencia', 'logotipo');
+new TextoAnimado('portafolio', 'portafoli');
+new TextoAnimado('contact', 'contacto');*/
