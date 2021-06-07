@@ -20,7 +20,7 @@
         grid-gap: 15px;
         padding: 12px;
     }
-    /**Navbar / image*/
+    /**Navbar // image*/
     
     .header {
         grid-column-start: 1;
@@ -105,7 +105,7 @@
     nav a:hover {
         border-bottom: 2px solid black;
     }
-    /**Aside*/
+    /** ----------------------Aside------------------------- */
     
     .aside {
         height: 720px;
@@ -213,7 +213,7 @@
     .center_iconos i {
         margin: 15px;
     }
-    /** section*/
+    /** ------------------section---------------------------------*/
     
     .seccion {
         background-color: #fbfbfb;
@@ -322,29 +322,48 @@
         position: absolute;
         top: 100px;
     }
-    /*
-    @media only screen and (min-width: 360px) {
+    
+    @media (max-width: 360px) {
         .grid-container {
-            grid-template-rows: repeat(3, auto);
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
         }
+        .header {
+            display: none;
+        }
+        /* .ocultar-img {
+            display: none;
+        }*/
         .aside {
-            grid-column-start: 1;
-            grid-column-end: 3;
             height: auto;
+            padding-top: 0px;
         }
-        .seccion {
-            grid-column-start: 1;
-            grid-column-end: 3;
+        .espaciocontact {
+            height: 0px;
+        }
+        .contacto {
+            display: none;
         }
         .container_experiencia {
-            grid-template-rows: repeat(6, auto);
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
         }
-        .item1 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }s
-        .item2 {
-            grid-column-start: 1;
-            grid-column-end: 3;
+        .container_experiencia>div {
+            padding: 5px 0;
         }
-    }*/
+        .texto-animado>div span {
+            font-size: 1em;
+            font-weight: normal;
+            line-height: 1.17em;
+        }
+        .fa-2x {
+            font-size: 1.5em !important;
+        }
+        .container_trabajos {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }

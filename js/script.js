@@ -4,35 +4,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var flag = false;
     var scrollvertical;
+    var ancho;
 
+    var imagen = document.getElementById("image"),
+        picture = document.getElementById("picture"),
+        tituloPosicion = document.getElementsByClassName("tituloPosicion")[0],
+        header = document.getElementsByClassName("header")[0],
+        aside = document.getElementsByClassName("aside")[0],
+        li = document.querySelectorAll("nav li"),
+        link = document.querySelectorAll("li a"),
+        espaciocontact = document.getElementsByClassName("espaciocontact")[0];
+
+    /* console.log(li);
+     console.log(link);*/
 
 
     window.addEventListener("scroll", function() {
 
+        window.addEventListener("resize", function() {
+
+            ancho = document.body.scrollWidth;
+
+            if (ancho <= 343) {
+
+                // console.log(ancho);
+
+                aside.style.cssText += "padding-top: 0px;";
+                espaciocontact.style.cssText += "height: 0px;";
+
+            }
+        });
+
         scrollvertical = window.pageYOffset;
-        // console.log(scrollvertical);
-
-        var imagen = document.getElementById("image"),
-            picture = document.getElementById("picture"),
-            tituloPosicion = document.getElementsByClassName("tituloPosicion")[0],
-            header = document.getElementsByClassName("header")[0],
-            aside = document.getElementsByClassName("aside")[0],
-            li = document.querySelectorAll("nav li"),
-            link = document.querySelectorAll("li a"),
-            espaciocontact = document.getElementsByClassName("espaciocontact")[0];
-
-        /* console.log(li);
-         console.log(link);*/
-
 
         if (scrollvertical > 97) {
 
             if (!flag) {
-
-                imagen.style.cssText += "top: 12px; left: 185px; width: 75px; height: 80px;";
                 tituloPosicion.style.cssText += "top: 95px;";
+                imagen.style.cssText += "top: 12px; left: 185px; width: 75px; height: 80px;";
                 header.style.cssText += "background-color: #3C3C3C;";
-                aside.style.cssText += "padding-top: 240px;";
 
                 for (let i = 0; i < li.length; i++) {
                     li[i].style.borderleft = "1px solid #bbb";
@@ -42,8 +52,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     link[i].style.color = "white";
 
                 }
+                window.addEventListener("resize", function() {
 
-                espaciocontact.style.cssText += "height: 285px;";
+                    if (ancho <= 343) {
+                        aside.style.cssText += "padding-top: 0px;";
+                        espaciocontact.style.cssText += "height: 0px;";
+                    } else {
+                        aside.style.cssText += "padding-top: 240px;";
+                        espaciocontact.style.cssText += "height: 285px;";
+                    }
+                });
 
                 flag = true;
             }
@@ -52,30 +70,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (flag) {
 
+                tituloPosicion.style.cssText += "top: 312px";
                 imagen.style.cssText += "top: 100px; left: 123px; width: 190px; height: 207px;";
                 picture.style.cssText += "width: 100%;";
-                tituloPosicion.style.cssText += "top: 312px";
                 header.style.cssText += "background-color: transparent;";
-                aside.style.cssText += "padding-top: 350px;";
+
 
                 for (let i = 0; i < link.length; i++) {
                     link[i].style.color = "black";
 
                 }
-
-                espaciocontact.style.cssText += "height: 200px;";
+                window.addEventListener("resize", function() {
+                    if (ancho <= 343) {
+                        aside.style.cssText += "padding-top: 0px;";
+                        espaciocontact.style.cssText += "height: 0px;";
+                    } else {
+                        aside.style.cssText += "padding-top: 350px;";
+                        espaciocontact.style.cssText += "height: 200px;";
+                    }
+                });
 
                 flag = false;
             }
         }
-
     });
+
+
+
+
 
     function Textoanimado(id) {
 
         var texto = document.getElementById(id);
 
-        console.log(texto);
+        // console.log(texto);
 
         var letras = texto.innerText.split("");
 
@@ -83,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         letras.forEach((letra) => {
             let caracter = letra === ' ' ? '&nbsp;' : letra;
-            console.log(caracter);
+            //console.log(caracter);
             texto.innerHTML = texto.innerHTML + `
                         <div>
                             <span>${caracter}</span>
