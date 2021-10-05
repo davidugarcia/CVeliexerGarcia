@@ -18,20 +18,18 @@ document.addEventListener("DOMContentLoaded", function() {
     /* console.log(li);
      console.log(link);*/
 
-
+    // Evento para agregar estilos en el nav.
     window.addEventListener("scroll", function() {
 
+        //evento para anular estilos en movil
         window.addEventListener("resize", function() {
 
             ancho = document.body.scrollWidth;
 
             if (ancho <= 343) {
-
                 // console.log(ancho);
-
                 aside.style.cssText += "padding-top: 0px;";
                 espaciocontact.style.cssText += "height: 0px;";
-
             }
         });
 
@@ -95,10 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
-
-
-
+    // funcion para agregar texto animado.
     function Textoanimado(id) {
 
         var texto = document.getElementById(id);
