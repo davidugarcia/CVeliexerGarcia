@@ -16,11 +16,11 @@
     .grid-container {
         display: grid;
         grid-template-columns: 33% auto;
-        grid-template-rows: repeat(2, auto);
         grid-gap: 15px;
         padding: 12px;
     }
-    /**Navbar // image*/
+
+    /** Navbar // image */
     
     .header {
         grid-column-start: 1;
@@ -78,8 +78,6 @@
     }
     
     nav ul {
-        display: block;
-        float: left;
         list-style: none;
         margin-right: 5px;
     }
@@ -105,7 +103,8 @@
     nav a:hover {
         border-bottom: 2px solid black;
     }
-    /** ----------------------Aside------------------------- */
+
+    /** ------- Aside ----- */
     
     .aside {
         height: 720px;
@@ -155,7 +154,7 @@
     .skill_item li:hover {
         background-color: #555;
     }
-    /**Educacion*/
+    /** Educacion */
     
     .Educacion {
         padding: 20px;
@@ -213,7 +212,7 @@
     .center_iconos i {
         margin: 15px;
     }
-    /** ------------------section---------------------------------*/
+    /** section */
     
     .seccion {
         background-color: #fbfbfb;
@@ -322,8 +321,7 @@
         position: absolute;
         top: 100px;
     }
-    
-    @media (max-width: 360px) {
+    @media screen and (max-width: 360px) {
         .grid-container {
             display: flex;
             flex-wrap: nowrap;

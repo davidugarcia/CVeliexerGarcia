@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         espaciocontact = document.getElementsByClassName("espaciocontact")[0];
 
     /* console.log(li);
-     console.log(link);*/
+    console.log(link);*/
 
     // Evento para agregar estilos en el nav.
     window.addEventListener("scroll", function() {
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var flag = false;
     var scroll;
 
-   $(window).scroll(function() {
+    $(window).scroll(function() {
         scroll = $(window).scrollTop();
 
         if (scroll > 97) {
