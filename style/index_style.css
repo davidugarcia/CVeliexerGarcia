@@ -334,6 +334,16 @@ nav {
   }
   
 
+  @media (max-width: 400px) {
+    .tituloPosicion{
+      width: 360px;
+    }
+
+    .aside{
+      height: auto;
+    }
+  }
+
 /*@media screen and (max-width: 400px) {
         .grid-container {
             display: flex;
