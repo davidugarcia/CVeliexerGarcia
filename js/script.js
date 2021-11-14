@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-
+document.addEventListener("DOMContentLoaded", function () {
     console.log("listo");
 
     var flag = false;
@@ -7,163 +6,136 @@ document.addEventListener("DOMContentLoaded", function() {
     var ancho;
 
     var imagen = document.getElementById("image"),
-        picture = document.getElementById("picture"),
-        tituloPosicion = document.getElementsByClassName("tituloPosicion")[0],
-        header = document.getElementsByClassName("header")[0],
-        aside = document.getElementsByClassName("aside")[0],
-        li = document.querySelectorAll("nav li"),
-        link = document.querySelectorAll("li a"),
-        espaciocontact = document.getElementsByClassName("espaciocontact")[0];
+    picture = document.getElementById("picture"),
+    tituloPosicion = document.getElementsByClassName("tituloPosicion")[0],
+    header = document.getElementsByClassName("header")[0],
+    aside = document.getElementsByClassName("aside")[0],
+    li = document.querySelectorAll("nav li"),
+    link = document.querySelectorAll("li a"),
+    espaciocontact = document.getElementsByClassName("espaciocontact")[0];
 
-    /* console.log(li);
-    console.log(link);*/
+  // Evento para agregar estilos en el nav.
+    window.addEventListener("scroll", function () {
 
-    // Evento para agregar estilos en el nav.
-    window.addEventListener("scroll", function() {
+    ancho = document.body.scrollWidth;
+    console.log(ancho);
 
-        //evento para anular estilos en movil
-        window.addEventListener("resize", function() {
+    scrollvertical = window.pageYOffset;
+    console.log(scrollvertical);
 
-            ancho = document.body.scrollWidth;
+    if (scrollvertical > 97) {
+        if (!flag) {
 
-            if (ancho <= 343) {
-                // console.log(ancho);
-                aside.style.cssText += "padding-top: 0px;";
-                espaciocontact.style.cssText += "height: 0px;";
+            /** Abajo */
+            header.style.cssText += "background-color: #3C3C3C;";
+        
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.color = "white";
             }
-        });
 
-        scrollvertical = window.pageYOffset;
-
-        if (scrollvertical > 97) {
-
-            if (!flag) {
+            if (ancho <= 360) {
+                /** phone */
+                imagen.style.cssText += "top: 75px; left: 135px; width: 90px; height: 100px;";
+                tituloPosicion.style.cssText += "top: 180px;";
+            } else {
+                /** Screen */
+                imagen.style.cssText += "top: 12px; left: 207px; width: 75px; height: 80px;";
                 tituloPosicion.style.cssText += "top: 95px;";
-                imagen.style.cssText += "top: 12px; left: 185px; width: 75px; height: 80px;";
-                header.style.cssText += "background-color: #3C3C3C;";
-
-                for (let i = 0; i < li.length; i++) {
-                    li[i].style.borderleft = "1px solid #bbb";
-                }
-
-                for (let i = 0; i < link.length; i++) {
-                    link[i].style.color = "white";
-
-                }
-                window.addEventListener("resize", function() {
-
-                    if (ancho <= 343) {
-                        aside.style.cssText += "padding-top: 0px;";
-                        espaciocontact.style.cssText += "height: 0px;";
-                    } else {
-                        aside.style.cssText += "padding-top: 240px;";
-                        espaciocontact.style.cssText += "height: 285px;";
-                    }
-                });
-
-                flag = true;
+                
             }
 
-        } else {
+        flag = true;
+    }
+    } else {
+        if (flag) {
+            /** Arriba */
+            header.style.cssText += "background-color: transparent;";
 
-            if (flag) {
+            for (let i = 0; i < link.length; i++) {
+            link[i].style.color = "black";
+            }
 
+            if (ancho <= 360) {
+                 /** phone */
+                imagen.style.cssText += "top: 75px; left: 135px; width: 90px; height: 100px;";
+                tituloPosicion.style.cssText += "top: 180px;";
+            } else {
+                 /** Screen */
+                imagen.style.cssText +="top: 100px; left: 149px; width: 190px; height: 207px;";
                 tituloPosicion.style.cssText += "top: 312px";
-                imagen.style.cssText += "top: 100px; left: 149px; width: 190px; height: 207px;";
-                picture.style.cssText += "width: 100%;";
-                header.style.cssText += "background-color: transparent;";
-
-
-                for (let i = 0; i < link.length; i++) {
-                    link[i].style.color = "black";
-
-                }
-                window.addEventListener("resize", function() {
-                    if (ancho <= 343) {
-                        aside.style.cssText += "padding-top: 0px;";
-                        espaciocontact.style.cssText += "height: 0px;";
-                    } else {
-                        aside.style.cssText += "padding-top: 350px;";
-                        espaciocontact.style.cssText += "height: 200px;";
-                    }
-                });
-
-                flag = false;
             }
+
+            flag = false;
         }
-    });
+    }
+});
 
-    // funcion para agregar texto animado.
+  // funcion para agregar texto animado.
     function Textoanimado(id) {
-
         var texto = document.getElementById(id);
 
-        // console.log(texto);
+    // console.log(texto);
 
         var letras = texto.innerText.split("");
 
-        texto.innerText = '';
+        texto.innerText = "";
 
         letras.forEach((letra) => {
-            let caracter = letra === ' ' ? '&nbsp;' : letra;
-            //console.log(caracter);
-            texto.innerHTML = texto.innerHTML + `
-                        <div>
-                            <span>${caracter}</span>
-                            <span class="segunda-linea">${caracter}</span>
-                        </div>
-                    `;
+        let caracter = letra === " " ? "&nbsp;" : letra;
+        //console.log(caracter);
+        texto.innerHTML =
+            texto.innerHTML +
+            `
+                            <div>
+                                <span>${caracter}</span>
+                                <span class="segunda-linea">${caracter}</span>
+                            </div>
+                        `;
         });
 
-        setInterval(encima, 5000);
+    setInterval(encima, 5000);
 
+    function encima() {
+        var cuenta = 0;
 
-        function encima() {
+        //console.log(texto.children.length);
 
-            var cuenta = 0;
+        const intervalo = setInterval(myFunction, 80);
 
-            //console.log(texto.children.length);
-
-            const intervalo = setInterval(myFunction, 80);
-
-            function myFunction() {
-                if (cuenta < texto.children.length) {
-                    texto.children[cuenta].classList.add('animacion');
-                    cuenta += 1;
-                } else {
-                    clearInterval(intervalo);
-                }
+        function myFunction() {
+            if (cuenta < texto.children.length) {
+            texto.children[cuenta].classList.add("animacion");
+            cuenta += 1;
+            } else {
+            clearInterval(intervalo);
             }
-        };
+        }
+    }
 
         setInterval(afuera, 9000);
 
         function afuera() {
+        var cuenta = 0;
 
-            var cuenta = 0;
+        //console.log(texto.children.length);
 
-            //console.log(texto.children.length);
+        const intervalo = setInterval(myFunction, 40);
 
-            const intervalo = setInterval(myFunction, 40);
-
-            function myFunction() {
-                if (cuenta < texto.children.length) {
-                    texto.children[cuenta].classList.remove('animacion');
-                    cuenta += 1;
-                } else {
-                    clearInterval(intervalo);
-                }
+        function myFunction() {
+            if (cuenta < texto.children.length) {
+            texto.children[cuenta].classList.remove("animacion");
+            cuenta += 1;
+            } else {
+            clearInterval(intervalo);
             }
-        };
-
-    };
+        }
+        }
+    }
 
     Textoanimado("experiencia");
     Textoanimado("portafolio");
     Textoanimado("contact");
-
 });
-
 
 /**JavaScript */
 
@@ -233,8 +205,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
 };*/
-
-
 
 /**Con JQuery */
 

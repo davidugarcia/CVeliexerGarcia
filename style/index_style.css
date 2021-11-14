@@ -26,89 +26,88 @@ body {
 /** --- Navbar // image ---- */
 
 @media (min-width: 400px) {
-    .header {
-      grid-column: 1 / -1;
-      position: sticky;
-      top: 0px;
-      width: 100%;
-      transition: background-color 0.2s;
-    }
+  .header {
+    grid-column: 1 / -1;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    transition: background-color 0.2s;
+  }
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    margin: auto;
-  }
-  
-  #image {
-    position: absolute;
-    top: 100px;
-    left: 149px;
-    width: 190px;
-    height: 207px;
-    overflow: hidden;
-    border-radius: 50%;
-    transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
-  }
-  
-  img#picture {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 100%;
-    height: auto;
-  }
-  
-  .tituloPosicion {
-    width: 489px;
-    text-align: center;
-    position: absolute;
-    top: 312px;
-    left: 0px;
-    background: #3c3c3c;
-    transition: top 0.2s;
-  }
-  
-  .tituloNombre {
-    font-variant: small-caps;
-    /*font-family: "nombre";*/
-    font-size: 38px;
-    color: #c7d4e1;
-  }
-  
-  .cargo {
-    font-family: "cargo";
-    font-size: 25px;
-    color: #147cd8;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin-right: 5px;
-  }
-  
-  nav ul li {
-    float: left;
-    margin: 13px 0px 13px 13px;
-    padding: 3px;
-    padding-left: 7px;
-    border-left: 1px solid #bbb;
-  }
-  
-  nav li:last-child {
-    border-right: none;
-  }
-  
-  nav ul a {
-    color: black;
-    text-decoration: none;
-    padding-bottom: 6px;
-  }
-  
-  nav a:hover {
-    border-bottom: 2px solid black;
-  }
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: auto;
+}
 
+#image {
+  position: absolute;
+  top: 100px;
+  left: 149px;
+  width: 190px;
+  height: 207px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
+}
+
+img#picture {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: auto;
+}
+
+.tituloPosicion {
+  width: 489px;
+  text-align: center;
+  position: absolute;
+  top: 312px;
+  left: 0px;
+  background: #3c3c3c;
+  transition: top 0.2s;
+}
+
+.tituloNombre {
+  font-variant: small-caps;
+  /*font-family: "nombre";*/
+  font-size: 38px;
+  color: #c7d4e1;
+}
+
+.cargo {
+  font-family: "cargo";
+  font-size: 25px;
+  color: #147cd8;
+}
+
+nav ul {
+  list-style: none;
+  margin-right: 5px;
+}
+
+nav ul li {
+  float: left;
+  margin: 13px 0px 13px 13px;
+  padding: 3px;
+  padding-left: 7px;
+  border-left: 1px solid #bbb;
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav ul a {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 6px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid black;
+}
 
 /** Aside */
 
@@ -138,7 +137,7 @@ nav {
   margin-top: 40px;
 }
 
-.espacioskill h3{
+.espacioskill h3 {
   color: #683488;
 }
 
@@ -226,14 +225,14 @@ nav {
 /** --- section ------ */
 
 @media (min-width: 400px) {
-    .seccion {
+  .seccion {
     background-color: #fbfbfb;
     grid-column: span 2;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+  }
 }
-  /** --- item grid section ----- */
+/** --- item grid section ----- */
 
 @media (min-width: 400px) {
   .container_experiencia {
@@ -246,35 +245,35 @@ nav {
 }
 
 .container_experiencia > div {
-    text-align: left;
-    padding: 20px 0;
-    margin-top: 7px;
-  }
-  
-  /**Experiencia*/
-  
-  .item1 {
-    font-size: 1.17em;
-    font-weight: bold;
-    color: #695f5f;
-  }
-  
-  .item2 {
-    color: #ab3686;
-  }
+  text-align: left;
+  padding: 20px 0;
+  margin-top: 7px;
+}
 
-  .item2 h3{
-    font-weight: bold;
-  }
-  
-  .espacioP {
-    margin-top: 10px;
-    color:#141212d6;
-    text-align: justify;
-  }
+/**Experiencia*/
 
-  /** ------ Portafolio ----- */
-  
+.item1 {
+  font-size: 1.17em;
+  font-weight: bold;
+  color: #695f5f;
+}
+
+.item2 {
+  color: #ab3686;
+}
+
+.item2 h3 {
+  font-weight: bold;
+}
+
+.espacioP {
+  margin-top: 10px;
+  color: #141212d6;
+  text-align: justify;
+}
+
+/** ------ Portafolio ----- */
+
 @media (min-width: 400px) {
   .container_trabajos {
     display: grid;
@@ -282,117 +281,122 @@ nav {
     grid-gap: 5px;
     padding: 5px;
     margin-top: 25px;
-    }
   }
-  .image1 {
-    padding: 5px;
-  }
-  
-  .image2 {
-    padding: 5px;
-  }
-  
-  div.polaroid {
-    width: 90%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 0px 15px 50px 15px;
-  }
-  /** animacion Experiencia - Portafolio - Contactame*/
-  
-  .titulo {
-    font-family: "nombre";
-    display: flex;
-    align-items: center;
-    color: #683475;
-  }
-  
-  .logotipo {
-    padding: 10px;
-    color: var(--logotipo);
-  }
-  
-  .logotipo:hover .subtitulo {
-    background: var(--primario);
-  }
-  
-  .texto-animado {
+}
+.image1 {
+  padding: 5px;
+}
+
+.image2 {
+  padding: 5px;
+}
+
+div.polaroid {
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0px 15px 50px 15px;
+}
+/** animacion Experiencia - Portafolio - Contactame*/
+
+.titulo {
+  font-family: "nombre";
+  display: flex;
+  align-items: center;
+  color: #683475;
+}
+
+.logotipo {
+  padding: 10px;
+  color: var(--logotipo);
+}
+
+.logotipo:hover .subtitulo {
+  background: var(--primario);
+}
+
+.texto-animado {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.texto-animado > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s ease all;
+}
+
+.texto-animado > div.animacion {
+  transform: translateY(-100px);
+}
+
+.texto-animado > div span {
+  font-size: 1.17em;
+  font-weight: normal;
+  line-height: 1.17em;
+}
+
+.texto-animado .segunda-linea {
+  position: absolute;
+  top: 100px;
+}
+
+/** Phone */
+@media (max-width: 400px) {
+
+  /** Nav */
+  nav {
     display: flex;
     justify-content: center;
-    overflow: hidden;
-  }
-  
-  .texto-animado > div {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: 0.3s ease all;
-  }
-  
-  .texto-animado > div.animacion {
-    transform: translateY(-100px);
-  }
-  
-  .texto-animado > div span {
-    font-size: 1.17em;
-    font-weight: normal;
-    line-height: 1.17em;
-  }
-  
-  .texto-animado .segunda-linea {
-    position: absolute;
-    top: 100px;
-  }
-  
-
-  @media (max-width: 400px) {
-    .tituloPosicion{
-      width: 360px;
-    }
-
-    .aside{
-      height: auto;
-    }
+    margin: auto;
   }
 
-/*@media screen and (max-width: 400px) {
-        .grid-container {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-        }
-        .header {
-            display: none;
-        }
-        .aside {
-            height: auto;
-            padding-top: 0px;
-        }
-        .espaciocontact {
-            height: 0px;
-        }
-        .contacto {
-            display: none;
-        }
-        .container_experiencia {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-        }
-        .container_experiencia>div {
-            padding: 5px 0;
-        }
-        .texto-animado>div span {
-            font-size: 1em;
-            font-weight: normal;
-            line-height: 1.17em;
-        }
-        .fa-2x {
-            font-size: 1.5em !important;
-        }
-        .container_trabajos {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-        }
-    }*/
+  .tituloPosicion {
+    width: 360px;
+    top: 180px;
+  }
+
+  #image {
+    top: 75px;
+    left: 135px;
+    width: 90px;
+    height: 100px;
+  }
+  .tituloNombre {
+    font-size: 30px;
+  }
+
+  /** Aside */
+  .aside {
+    height: auto;
+    padding-top: 235px;
+  }
+
+  .espaciocontact {
+    height: 50px;
+  }
+
+  .container_experiencia{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /** Experiencia*/ 
+
+  .seccion {
+    margin-top: 55px;
+  }
+  .titulo{
+    padding: 20px;
+  }
+
+  .titulo {
+    padding: 12px;
+  }
+
+  .logotipo{
+    padding: 7px;
+  }
+}
