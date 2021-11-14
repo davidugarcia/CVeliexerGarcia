@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (flag) {
 
                 tituloPosicion.style.cssText += "top: 312px";
-                imagen.style.cssText += "top: 100px; left: 123px; width: 190px; height: 207px;";
+                imagen.style.cssText += "top: 100px; left: 149px; width: 190px; height: 207px;";
                 picture.style.cssText += "width: 100%;";
                 header.style.cssText += "background-color: transparent;";
 
