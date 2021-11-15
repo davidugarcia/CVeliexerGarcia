@@ -14,7 +14,7 @@ body {
 
 /** ----- Grid conatiner ----- */
 
-@media (min-width: 400px) {
+@media (min-width: 414px) {
   .grid-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
@@ -25,7 +25,7 @@ body {
 
 /** --- Navbar // image ---- */
 
-@media (min-width: 400px) {
+@media (min-width: 414px) {
   .header {
     grid-column: 1 / -1;
     position: sticky;
@@ -125,6 +125,12 @@ nav a:hover {
   background-color: rgb(60 60 60);
 }
 
+.espacioperfil div h3 {
+  color: #f7f7f7;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+
 .espacioParrafo {
   margin: 10px;
   padding: 5px;
@@ -138,12 +144,12 @@ nav a:hover {
 }
 
 .espacioskill h3 {
+  margin-left: 10px;
   color: #683488;
 }
 
 .skill {
   margin: 10px;
-  padding: 10px;
 }
 
 .skill ul {
@@ -172,6 +178,11 @@ nav a:hover {
   margin: 20px 0px 0px 0px;
 }
 
+.educatitulo{
+  color: #ffffff;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}
 .container_educacion {
   height: auto;
   padding: 5px;
@@ -224,7 +235,7 @@ nav a:hover {
 }
 /** --- section ------ */
 
-@media (min-width: 400px) {
+@media (min-width: 414px) {
   .seccion {
     background-color: #fbfbfb;
     grid-column: span 2;
@@ -234,7 +245,7 @@ nav a:hover {
 }
 /** --- item grid section ----- */
 
-@media (min-width: 400px) {
+@media (min-width: 414px) {
   .container_experiencia {
     display: grid;
     grid-template-columns: 36% auto;
@@ -274,7 +285,7 @@ nav a:hover {
 
 /** ------ Portafolio ----- */
 
-@media (min-width: 400px) {
+@media (min-width: 414px) {
   .container_trabajos {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -344,7 +355,7 @@ div.polaroid {
 }
 
 /** Phone */
-@media (max-width: 400px) {
+@media (max-width: 414px) {
 
   /** Nav */
   nav {

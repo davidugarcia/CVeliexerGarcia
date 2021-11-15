@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link[i].style.color = "white";
             }
 
-            if (ancho <= 360) {
+            if (ancho <= 414) {
                 /** phone */
                 imagen.style.cssText += "top: 75px; left: 135px; width: 90px; height: 100px;";
                 tituloPosicion.style.cssText += "top: 180px;";
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             link[i].style.color = "black";
             }
 
-            if (ancho <= 360) {
+            if (ancho <= 414) {
                  /** phone */
                 imagen.style.cssText += "top: 75px; left: 135px; width: 90px; height: 100px;";
                 tituloPosicion.style.cssText += "top: 180px;";
